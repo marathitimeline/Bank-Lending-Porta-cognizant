@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+    <html>  
+        <head>   
+            <script src="script.js" lang="text/javascript"></script>
+            <title>AC Maintenance Service</title>
+            <style type ="text/css"> 
+             body { 
+                
+                background-color: #0CA2B9;
+                width: 80%;
+                margin-left: 10%;    
+            }
+            h1 {    
+                  
+                color: #FFFFFF;  
+                font-family:Calibri;
+                font-style: italic;
+                background-color: #900043;
+                text-align:center;    
+            }
+            #result {
+                 
+                 font-weight: bold;
+                 font-family: Arial;
+                 font-size:18px;
+                 color:#782E07;
+            }
+            #submit, #reset {
+                
+                font-weight: bold;
+                font-family: Candara;
+                background-color: #556B2F;
+                width:10em;
+                height:35px;
+                border-radius: 10px;    
+            }
+            input {    
+                width:13.6em;    
+            }
+            #appointment {
+                font-family:sans-serif;
+                width:80%;
+                border-collapse:collapse;
+                text-align:left;
+            }
+            #acType, textarea{    
+                width:13.6em;    
+            }    
+            select {    
+                width:14em;    
+            }    
+            td{    
+                 padding:3px;
+            }
+            #male, #female, #yearlyMaintenance {
+                width:10pt;
+            }
+            .checkboxes label {
+                display: inline-block;
+                padding-right: 10px;
+                white-space: nowrap;
+            }
+            .checkboxes input {    
+                vertical-align: middle;
+            }
+            .checkboxes label span {
+                vertical-align: middle;
+            }
+            </style>
+            </head>
+            <body>  
+                <h1>AC Maintenance Service</h1>
+                <form onsubmit="return bookAppointment()" >
+                    <table id="appointment">
+                        <tr>
+                            <td><label for = 'customerName'>Customer Name</label></td>
+                            <td><input type='text'  id = 'customerName' placeholder="Enter your name" required></td></tr>
+                            <td> <label for = 'mobileNumber'>Mobile Number</label></td>
+                            <td> <input type ='tel' id ='mobileNumber' name  ='Mobile Number' placeholder="Enter your mobile number" pattern="^[7-9][0-9]{9}$" maxlength="10" minLength = '10' required> </td>
+                        </tr>
+                         <tr>
+                            <td> <label for = 'address'>Address</label></td>
+                            <td> <textarea id= 'address' name = 'address' placeholder="Enter your address" rows = '5' cols ='25' required></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <label for = 'acType'>AC Type</label> </td>
+                            <td>
+                                <select id="acType">
+                                    <option id="Split" value ="Split">Split</option>
+                                    <option  id="Window" value  ="Window">Window</option>
+                                    <option  id = "Centralized" value = "Centralized">Centralized</option>
+                                    <option id='Portable' value  ='Portable'>Portable</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <label for ='serviceType'>Service Type</label> </td>
+                            <td>
+                                <input type="checkbox" name="serviceType" id="Cleaning" value="Cleaning" >
+                                <label for = 'Cleaning'> Cleaning</label>
+                                <input type="checkbox" name="serviceType" id="Repair" value="Repair" >
+                                <label for = 'Repair'> Repair</label>
+                                <input type="checkbox" name="serviceType" id="Gas Refill" value="Gas Refill" >
+                                <label for = 'Gas Refill'> Gas Refill</label>
+                                <input type="checkbox" name="serviceType" id="Relocation" value="Relocation" >
+                                <label for = 'Relocation'> Relocation</label>
+                                <input type="checkbox" name="serviceType" id="Filter" value="Filter" >
+                                <label for = 'Filter'> Filter</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <label for = 'dateForAppointment'>Date for Appointment</label> </td>
+                            <td> <input type ='date' id  = 'dateForAppointment' required> </td>
+                        </tr>
+                        <tr>
+                            <td> <label for ='yearlyMaintenance'>Yearly Maintenance</label> </td>
+                            <td> <input type = 'checkbox' id = 'yearlyMaintenance' name = 'yearlyMaintenance'> <label for = 'yearlyMaintenance'>Select if required</label></td>
+                        </tr><tr><td> <!-- empty cell --></td>
+                            <td><input type = 'submit'  value = 'Submit' id = 'submit'>
+                                <input type ='reset' value ='Clear'   id = 'reset' >
+                            </td></tr><tr>
+                                <td colspan="2">
+                                    <div id="result"></div>
+                                </td></tr>
+                            </table>
+                </form>
+            </body>
+    </html>
