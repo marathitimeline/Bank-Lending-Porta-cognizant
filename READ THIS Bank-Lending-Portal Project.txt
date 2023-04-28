@@ -1,0 +1,13 @@
+* Ready Project
+* Microservices , SpringBoot, Angular
+* Junit Enabled
+* Swagger Enabled
+
++
+
+Evaluation Criteria Sheet
+
+Contact : sitemasteradmin@protonmail.com
+
+
+
